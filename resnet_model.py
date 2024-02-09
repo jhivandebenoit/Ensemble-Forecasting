@@ -5,17 +5,18 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, BatchNormalization, Activation, Add, Flatten
 from tensorflow.keras.optimizers import Adam
 
+
+def smape_loss(y_true, y_pred):
+    denominator = tf.abs(y_true) + tf.abs(y_pred)
+    diff = tf.abs(y_true - y_pred)
+    smape = 200 * tf.reduce_mean(diff / denominator)
+    return smape
+
+
+
+
+
 def ResNet(input_features=24, num_models=5):
-    """
-    Create a ResNet model.
-    
-    Parameters:
-    input_features (int): Number of time series features
-    num_models (int): Number of models to combine
-    
-    Returns:
-    model: Ensemble Model
-    """
 
     def residual_block(X, units):
         X_shortcut = X
@@ -36,6 +37,6 @@ def ResNet(input_features=24, num_models=5):
 
     model.add(Flatten())
     model.add(Dense(num_models, activation='softmax'))
-    model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy')
+    model.compile(optimizer=Adam(learning_rate=0.001), loss=)
 
     return model

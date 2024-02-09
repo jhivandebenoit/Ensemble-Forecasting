@@ -1,0 +1,38 @@
+2024-01-29 08:25:14,046 INFO  NEWS:  Welcome to AutoGPT!
+2024-01-29 08:25:14,046 INFO  NEWS:  Below you'll find the latest AutoGPT News and feature updates!
+2024-01-29 08:25:14,046 INFO  NEWS:  If you don't wish to see this message, you can run AutoGPT with the --skip-news flag.
+2024-01-29 08:25:14,046 INFO  NEWS:  
+2024-01-29 08:25:14,047 INFO  NEWS:  ::NEW BULLETIN::
+2024-01-29 08:25:14,047 INFO  NEWS:  
+2024-01-29 08:25:14,047 INFO  NEWS:  QUICK LINKS 🔗
+2024-01-29 08:25:14,047 INFO  NEWS:  --------------
+2024-01-29 08:25:14,048 INFO  NEWS:  🌎 Official Website: https://agpt.co.
+2024-01-29 08:25:14,048 INFO  NEWS:  📖 User Guide: https://docs.agpt.co/autogpt.
+2024-01-29 08:25:14,048 INFO  NEWS:  👩 Contributors Wiki: https://github.com/Significant-Gravitas/Nexus/wiki/Contributing.
+2024-01-29 08:25:14,048 INFO  NEWS:  
+2024-01-29 08:25:14,049 INFO  NEWS:  v0.5.0 RELEASE HIGHLIGHTS! 🚀🚀
+2024-01-29 08:25:14,049 INFO  NEWS:  -------------------------------
+2024-01-29 08:25:14,049 INFO  NEWS:  Cloud-readiness, a new UI, support for the newest Agent Protocol version, and much more:
+2024-01-29 08:25:14,049 INFO  NEWS:  v0.5.0 is our biggest release yet!
+2024-01-29 08:25:14,050 INFO  NEWS:  
+2024-01-29 08:25:14,050 INFO  NEWS:  Take a look at the Release Notes on Github for the full changelog:
+2024-01-29 08:25:14,050 INFO  NEWS:  https://github.com/Significant-Gravitas/AutoGPT/releases.
+2024-01-29 08:25:14,050 INFO  NEWS:  
+2024-01-29 08:25:34,256 INFO  Smart LLM:  gpt-3.5-turbo
+2024-01-29 08:25:34,256 INFO  Fast LLM:  gpt-3.5-turbo-16k
+2024-01-29 08:25:34,256 INFO  Browser:  chrome
+2024-01-29 08:27:29,962 INFO  message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=e2b0484d26b463de1c066d2aff6229ec response_code=429
+2024-01-29 08:27:29,963 INFO  error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2024-01-29 08:27:29,963 WARNING  Please double check that you have setup a PAID OpenAI API Account. You can read more here: https://docs.agpt.co/setup/#getting-an-openai-api-key
+2024-01-29 08:27:38,281 INFO  message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=39a1b6d48bd9d06c299a17c137958173 response_code=429
+2024-01-29 08:27:38,281 INFO  error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2024-01-29 08:27:54,562 INFO  message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=9044a050eeb03dae964672fb99408506 response_code=429
+2024-01-29 08:27:54,563 INFO  error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2024-01-29 08:28:27,325 INFO  message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=01406df1de433dd000fa2d9d5cf71171 response_code=429
+2024-01-29 08:28:27,326 INFO  error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2024-01-29 08:29:31,765 INFO  message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=83661a90964ca51f43c37b3cdd5b8b27 response_code=429
+2024-01-29 08:29:31,765 INFO  error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2024-01-29 08:31:40,211 INFO  message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=3430b5cd220539acbd21b78d2b6661fa response_code=429
+2024-01-29 08:31:40,211 INFO  error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2024-01-29 08:35:56,666 INFO  message='OpenAI API response' path=https://api.openai.com/v1/chat/completions processing_ms=None request_id=7a48830afecbaa51f12d9a3d2b5eb8f9 response_code=429
+2024-01-29 08:35:56,666 INFO  error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
