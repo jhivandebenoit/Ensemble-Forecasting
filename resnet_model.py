@@ -1,42 +1,47 @@
 # resnet_model.py
 
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, BatchNormalization, Activation, Add, Flatten
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Conv1D, BatchNormalization, ReLU, Add, GlobalAveragePooling1D, Dense, Softmax
 
+def residual_block(x, filters, kernel_size=3, stride=1):
+    # Shortcut
+    shortcut = x
+    
+    # First component of the main path
+    x = Conv1D(filters=filters, kernel_size=kernel_size, strides=stride, padding='same')(x)
+    x = BatchNormalization()(x)
+    x = ReLU()(x)
+    
+    # Second component of the main path
+    x = Conv1D(filters=filters, kernel_size=kernel_size, strides=1, padding='same')(x)
+    x = BatchNormalization()(x)
+    
+    # Add shortcut value to main path
+    x = Add()([x, shortcut])
+    x = ReLU()(x)
+    
+    return x
 
-def smape_loss(y_true, y_pred):
-    denominator = tf.abs(y_true) + tf.abs(y_pred)
-    diff = tf.abs(y_true - y_pred)
-    smape = 200 * tf.reduce_mean(diff / denominator)
-    return smape
-
-
-
-
-
-def ResNet(input_features=24, num_models=5):
-
-    def residual_block(X, units):
-        X_shortcut = X
-        X = Dense(units)(X)
-        X = BatchNormalization()(X)
-        X = Activation('relu')(X)
-        X = Dense(units)(X)
-        X = BatchNormalization()(X)
-        X = Add()([X, X_shortcut])
-        X = Activation('relu')(X)
-        return X
-
-    model = Sequential()
-    model.add(Dense(64, input_dim=input_features))
-
-    for _ in range(3):  # Add 3 residual blocks
-        model.add(residual_block(model.output, 64))
-
-    model.add(Flatten())
-    model.add(Dense(num_models, activation='softmax'))
-    model.compile(optimizer=Adam(learning_rate=0.001), loss=)
-
+def Resnet_META(input_shape=(788, 1), num_classes=4):
+    inputs = Input(shape=input_shape)
+    
+    # Initial feature extraction
+    x = Conv1D(filters=64, kernel_size=7, strides=2, padding='same')(inputs)
+    x = BatchNormalization()(x)
+    x = ReLU()(x)
+    
+    # Define the ResNet blocks
+    x = residual_block(x, filters=64)
+    x = residual_block(x, filters=128, stride=2)
+    x = residual_block(x, filters=256, stride=2)
+    
+    # Global pooling and output
+    x = GlobalAveragePooling1D()(x)
+    x = Dense(units=num_classes)(x)
+    outputs = Softmax()(x)
+    
+    # Create model
+    model = Model(inputs=inputs, outputs=outputs)
+    
     return model
